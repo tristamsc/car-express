@@ -1,0 +1,174 @@
+
+/* Cuerpo */
+
+
+/* Banner ------------------------------------------*/
+
+
+.banner-box img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    
+}
+
+/* Seccion 'Quienes Somos' */
+main {
+    font-size: 12pt;
+
+}
+
+.home-section {
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 80px;
+
+}
+
+.quienes-somos {
+    background-color: var(--bg-colo-1);
+}
+
+.text {
+    width: 700px;
+    height: 400px;
+}
+
+.title {
+    font-family: "Bebas Neue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 4.6em;
+    margin-bottom: 20px;
+}
+
+.parrafo {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    margin: 5px;
+    font-size: 1em;
+}
+
+.quienes-somos .img-box {
+    display: flex;
+    justify-content: space-around;
+    width: 665px;
+}
+
+.quienes-somos img {
+    width: 300px;
+}
+
+.shadow {
+    box-shadow: 0 5px 15px #00000055;
+}
+
+img.img1 {
+    border-top-left-radius: 100px;
+}
+
+img.img2 {
+    border-bottom-right-radius: 100px;
+}
+
+/* Targetas */
+.porque-elegirnos {
+    background-color: var(--bg-colo-2);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+.targets-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+
+}
+
+.target-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 270px;
+    height: 200px;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+
+    transition:opacity 0.4s ease-in-out;
+
+}
+
+/* .rotate-out {
+    opacity: 1;
+
+}
+.rotate-in {
+  opacity: 0;
+
+} */
+
+.subtitle {
+    font-family: "Bebas Neue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+.viaje-text {
+    font-size: 1.2em;
+    text-align: center;
+    width: 600px;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: left;
+}
+.carros-displacement {
+    background-color: var(--bg-colo-1);
+    border-radius: 50px;
+    width: 600px;
+}
+.carros-displacement img {
+    width: 600px;
+    height: 400px;
+}
+
+.mapa {
+    width: 670px;
+    /* O el ancho que necesites */
+    height: 450px;
+    /* O el alto que necesites */
+    border-radius: 35px;
+    /* ¡Tu borde redondeado! */
+    overflow: hidden;
+    /* ¡La propiedad clave para que funcione! */
+}
+
+.mapa iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,166 @@
+.card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  width: 300px;     /* ajusta según el diseño */
+  min-height: 300px; /* altura fija */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-body {
+  margin-top: 10px;
+}
+
+.card .precio {
+  font-weight: bold;
+  color: #e63946;
+}
+
+/* Estilos del botón de reservar */
+.card button:not(.toggle-info-btn):not(.close-btn) {
+  margin: 1rem 0;
+  padding: 0.5em 1em;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card button:not(.toggle-info-btn):not(.close-btn):hover {
+  background-color: #005fa3;
+}
+
+/* Estilos de la etiqueta */
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #e63946;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 6px;
+  z-index: 10;
+  font-family: 'Inter', sans-serif;
+}
+
+
+.toggle-info-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #e60000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Botón de cierre (X) */
+.close-btn {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #e60000;
+}
+
+/* Parte trasera del card*/
+.detalles-card {
+  padding: 1rem;
+  margin-top: 1.5rem; 
+}
+
+/* Botón toggle */
+.toggle-info-btn {
+  background: none;
+  border: none;
+  color: #e60000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.toggle-info-btn:hover {
+  color: #b30000;
+  text-decoration: underline;
+}
+
+/* Grid ordenado para la parte trasera */
+.lista-detalles-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.lista-detalles-grid div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.lista-detalles-grid .icono {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: #444;
+}
+
+/*unir mas caraafrontal*/
+.card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 1rem 0 0.5rem 0; /* menos espacio arriba y abajo */
+}
+
+.card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  margin: 0.25rem 0; /* reduce espacio vertical */
+  color: #444;
+}
+
+.card .anio {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.card .precio {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #e63946;
+  margin-top: 0.5rem;
+}
+
+.card > div:not(.detalles-card) {
+  margin-top: 1.5rem; /* baja todo el bloque del frente */
+}
+

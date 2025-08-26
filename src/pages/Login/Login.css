@@ -1,0 +1,132 @@
+/*  Login Page */
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
+  background-color: #f9f9f9;
+  padding: 40px 20px;
+}
+.login-card img {
+  width: 120px;       
+  height: auto;       
+  display: block;     
+  margin: 0 auto 20px auto; 
+}
+
+
+.login-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  margin-bottom: 20px;
+  color: #001755;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color1);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.login-btn:hover {
+  background-color: var(--hover-button);
+}
+
+.login-links {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.login-links a {
+  color: var(--color1);
+  text-decoration: none;
+}
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+/*  Footer tarjetas */
+.payment-footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+.payment-footer .cards img {
+  height: 40px;
+  margin: 0 10px;
+}
+
+/*  Footer redes sociales */
+/* .social-footer {
+  background-color: #dddddd;
+  padding: 20px 0;
+  width: 100%;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-social a {
+  margin-left: 15px;
+}
+.footer-social img {
+  width: 25px;
+  height: 25px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.footer-social img:hover {
+  filter: grayscale(0%);
+}
+ */

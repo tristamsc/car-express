@@ -1,0 +1,131 @@
+/* apartado de contactos */
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.form-section {
+    flex: 1 1 400px;
+    max-width: 500px;
+}
+
+.form-section h2 {
+    color: #001755;
+    margin-bottom: 10px;
+}
+
+.form-section p {
+    margin-bottom: 20px;
+    font-size: 14px;
+}   
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form button {
+    background-color: #0077ff;
+    color: white;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button i {
+    margin-right: 8px;
+}
+
+.image-section {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.image-section img {
+    width: 150%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.image-section h3 {
+    color: #000f3a;
+}
+
+
+/* Estilos para el footer de tarjetas */
+.payment-footer {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.payment-footer .cards img {
+  height: 40px;
+  margin: 0 10px;
+}
+/* Estilos para el footer de redes sociales */
+ .social-footer{
+  background-color: #dddddd;
+  padding: 20px 0;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-social a {
+  margin-left: 15px;
+}
+
+.footer-social img {
+  width: 25px;
+  height: 25px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.footer-social img:hover {
+  filter: grayscale(0%);
+} 
