@@ -1,0 +1,146 @@
+/* 1) @import DEBE ir antes de cualquier otra regla */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&display=swap');
+
+/* === Estilos base y variables === */
+* { margin: 0; box-sizing: border-box; }
+
+:root{
+  --color1: #43aaff;
+  --hover-button: #3a99e7;
+  --white-hover: #e7e7e7;
+  --bg-color-1: #beedff;
+  --bg-color-2: #f1f1f1;
+  --border-color: #ddd;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+  color: var(--text-color);
+}
+
+/* === Header / Nav === */
+header { position: sticky; top: 0; z-index: 1000; }
+.menu-container {
+  background-color: #ffffff;
+  border-bottom: 1px solid #00000055;
+  display: flex; justify-content: space-around; align-items: center;
+  height: 120px; font-size: 11pt; width: 100%;
+}
+.logo { width: 220px; }
+.search {
+  height: 40px; width: 600px; border-radius: 40px;
+  padding: 0 20px; font-size: 12pt; border: 1px solid #000;
+}
+.search:focus { outline: none; border-color: var(--hover-button); }
+.menu-container > ul {
+  display: flex; list-style: none; justify-content: space-around;
+  width: 500px; height: 50px; align-items: center;
+}
+.menu-container a {
+  text-decoration: none; font-size: 1em; color: #000000;
+}
+li a {
+  background-color: #ffffff; width: 120px; height: 40px; border-radius: 30px;
+  display: flex; align-items: center; justify-content: center;
+}
+.menu-container li a:hover { background-color: var(--white-hover); }
+.login {
+  display: flex; align-items: center; justify-content: center;
+  width: 180px; height: 50px; background-color: var(--color1);
+  padding: 0 8px; border-radius: 50px; color: #fff;
+}
+.login:hover { background-color: var(--hover-button); }
+.login svg { width: 22px; height: 22px; margin-right: 10px; fill: #fff; }
+
+/* === Contenido de Reservas === */
+.reservas-container {
+  max-width: 1200px; margin: 40px auto; padding: 0 20px;
+}
+.reservas-container h1 {
+  text-align: center; font-family: "Bebas Neue", sans-serif;
+  font-size: 3em; color: #001755; margin-bottom: 30px;
+}
+.reserva-content {
+  display: flex; gap: 40px; flex-wrap: wrap;
+}
+.form-section {
+  flex: 1 1 600px; background: #fff; padding: 30px; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.form-section h2 {
+  color: #001755; margin-bottom: 20px; font-family: "Bebas Neue", sans-serif;
+  font-size: 2em;
+}
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.form-group input, .form-group select {
+  width: 100%; padding: 12px 15px; border: 1px solid var(--border-color);
+  border-radius: 6px; font-size: 1rem;
+}
+.form-group input:focus, .form-group select:focus {
+  outline: none; border-color: var(--color1); box-shadow: 0 0 0 2px rgba(67,170,255,0.2);
+}
+.btn-reservar {
+  width: 100%; padding: 15px; background-color: var(--color1); color: #fff;
+  border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer;
+  transition: background-color 0.3s ease; margin-top: 20px;
+}
+.btn-reservar:hover { background-color: var(--hover-button); }
+
+/* === Resumen === */
+.resumen-section {
+  flex: 1 1 400px; background: #fff; padding: 30px; border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); align-self: flex-start;
+}
+.vehiculo-resumen {
+  text-align: center; margin-bottom: 30px; padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+.vehiculo-resumen img {
+  width: 100%; max-width: 300px; height: auto; border-radius: 8px; margin-bottom: 15px;
+}
+.precio { font-weight: bold; color: var(--color1); font-size: 1.2rem; }
+.detalles-reserva h3 {
+  color: #001755; margin-bottom: 15px; font-family: "Bebas Neue", sans-serif;
+  font-size: 1.5em; /* <-- corregido */
+}
+.detalle-item {
+  display: flex; justify-content: space-between; margin-bottom: 10px;
+  padding-bottom: 10px; border-bottom: 1px dashed var(--border-color);
+}
+.detalle-item.total {
+  font-weight: bold; font-size: 1.2rem; border-bottom: none;
+  margin-top: 15px; padding-top: 15px; border-top: 2px solid var(--border-color);
+}
+
+/* === Footer de pagos y redes === */
+.payment-footer {
+  background-color: #ffffff; padding: 20px; text-align: center; margin-top: 50px;
+}
+.payment-footer .cards img { height: 40px; margin: 0 10px; }
+.social-footer { background-color: #dddddd; padding: 20px 0; }
+.footer-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 30px; display: flex;
+  justify-content: space-between; align-items: center; flex-wrap: wrap;
+}
+.footer-links { display: flex; gap: 30px; }
+.footer-links a { color: #000; text-decoration: none; font-size: 14px; }
+.footer-links a:hover { text-decoration: underline; }
+.footer-social a { margin-left: 15px; }
+.footer-social img { width: 25px; height: 25px; filter: grayscale(100%); transition: filter .3s; }
+.footer-social img:hover { filter: grayscale(0%); }
+
+/* === Responsivo === */
+@media (max-width:1024px){
+  .reserva-content { flex-direction: column; }
+  .form-section, .resumen-section { flex: 1 1 100%; }
+}
+@media (max-width:768px){
+  .menu-container { flex-wrap: wrap; height: auto; padding: 15px 0; }
+  .search { width: 100%; max-width: 600px; margin: 15px 0; }
+  .menu-container>ul { width: 100%; margin: 15px 0; }
+  .reservas-container { margin: 20px auto; }
+  .form-section, .resumen-section { padding: 20px; }
+}
