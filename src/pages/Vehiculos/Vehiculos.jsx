@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import "./styles/vehiculos.css";
 import Card from "./components/Card";
 
@@ -6,17 +5,15 @@ import Card from "./components/Card";
 import { DoorOpen, Users, Luggage, Snowflake, Smartphone, Shield, Car } from "lucide-react";
 
 // Importación de imágenes
-import vehiculo2 from "../../assets/img/vehiculo2.png";
-import corolla10 from "../../assets/img/corolla10.png";
-import jetta2 from "../../assets/img/jetta2.png";
-import corollacross1 from "../../assets/img/corollacross1.jpg";
-import qashqai from "../../assets/img/nissan-qashqai-2024.png";
-import creta from "../../assets/img/hyundai_creta.png";
-import frontier from "../../assets/img/Nissan-frontier-2024.png";
-import hilux from "../../assets/img/toyota_hilux_2025.png";
-import mitsubishi from "../../assets/img/mitsubishi_2025.png";
-import { Nav } from "../../components/Nav";
-import Footer from "../../components/Footer";
+import vehiculo2 from "../assets/img/vehiculo2.png";
+import corolla10 from "../assets/img/corolla10.png";
+import jetta2 from "../assets/img/jetta2.png";
+import corollacross1 from "../assets/img/corollacross1.jpg";
+import qashqai from "../assets/img/nissan-qashqai-2024.png";
+import creta from "../assets/img/hyundai_creta.png";
+import frontier from "../assets/img/Nissan-frontier-2024.png";
+import hilux from "../assets/img/toyota_hilux_2025.png";
+import mitsubishi from "../assets/img/mitsubishi_2025.png";
 
 export default function Vehiculos() {
   const vehiculos = [
@@ -176,129 +173,47 @@ export default function Vehiculos() {
     }
   ];
 
-  // Estados
-  const [marca, setMarca] = useState("");
-  const [modelo, setModelo] = useState("");
-  const [precioMin, setPrecioMin] = useState("");
-  const [precioMax, setPrecioMax] = useState("");
-
-  // 🔹 Extraer marcas y modelos
-  const marcasDisponibles = [...new Set(vehiculos.map((v) => v.titulo.split(" ")[0]))];
-
-  const modelosTodos = vehiculos.map((v) => {
-    const partes = v.titulo.split(" ");
-    return { marca: partes[0], modelo: partes.slice(1).join(" ") };
-  });
-
-  // 🔹 Modelos dependientes de la marca (si no hay marca, mostrar todos los modelos)
-  const modelosDisponibles = marca
-    ? [...new Set(modelosTodos.filter((m) => m.marca === marca).map((m) => m.modelo))]
-    : [...new Set(modelosTodos.map((m) => m.modelo))];
-
-  // 🔹 Si el usuario elige un modelo directamente, seleccionar automáticamente su marca
-  useEffect(() => {
-    if (modelo !== "") {
-      const encontrado = modelosTodos.find((m) => m.modelo === modelo);
-      if (encontrado && marca !== encontrado.marca) {
-        setMarca(encontrado.marca);
-      }
-    }
-  }, [modelo]);
-
-  // 🔹 Rangos de precios (predefinidos)
-  const rangosPrecio = [
-    { label: "Menos de S/ 130", min: 0, max: 130 },
-    { label: "S/ 130 - S/ 160", min: 130, max: 160 },
-    { label: "S/ 160 - S/ 180", min: 160, max: 180 },
-    { label: "Más de S/ 180", min: 180, max: 9999 },
-  ];
-
-  // 🔹 Filtrado final
-  const filteredVehiculos = vehiculos.filter((auto) => {
-    const partes = auto.titulo.split(" ");
-    const autoMarca = partes[0];
-    const autoModelo = partes.slice(1).join(" ");
-    const precioNumerico = parseFloat(
-      auto.precio
-        .replace("S/", "")
-        .replace("por día", "")
-        .replace(/[^\d.]/g, "")
-        .trim()
-    );
-
-    return (
-      (marca === "" || autoMarca === marca) &&
-      (modelo === "" || autoModelo === modelo) &&
-      (precioMin === "" || precioNumerico >= parseFloat(precioMin)) &&
-      (precioMax === "" || precioNumerico <= parseFloat(precioMax))
-    );
-  });
-
   return (
-    
     <div className="vehiculos-page">
-      <Nav />
-      {/* 🔹 Filtros */}
       <section className="filtros">
-        {/* Marca */}
-        <select
-          value={marca}
-          onChange={(e) => {
-            setMarca(e.target.value);
-            setModelo("");
-          }}
-        >
+        <select defaultValue="">
           <option value="">Todas las marcas</option>
-          {marcasDisponibles.map((m) => (
-            <option key={m} value={m}>{m}</option>
-          ))}
+          <option value="nissan">Nissan</option>
+          <option value="toyota">Toyota</option>
+          <option value="volkswagen">Volkswagen</option>
+          <option value="hyundai">Hyundai</option>
+          <option value="mitsubishi">Mitsubishi</option>
         </select>
 
-        {/* Modelo */}
-        <select
-          value={modelo}
-          onChange={(e) => setModelo(e.target.value)}
-        >
+        <select defaultValue="">
           <option value="">Todos los modelos</option>
-          {modelosDisponibles.map((mod) => (
-            <option key={mod} value={mod}>{mod}</option>
-          ))}
+          <option value="versa">Versa</option>
+          <option value="corolla">Corolla</option>
+          <option value="jetta">Jetta</option>
+          <option value="corolla-cross">Corolla Cross</option>
+          <option value="qashqai">Qashqai</option>
+          <option value="creta">Creta</option>
+          <option value="frontier">Frontier</option>
+          <option value="hilux">Hilux</option>
+          <option value="l200">L200</option>
         </select>
 
-        {/* Precio */}
-        <select
-          value={`${precioMin}-${precioMax}`}
-          onChange={(e) => {
-            const [min, max] = e.target.value.split("-");
-            setPrecioMin(min || "");
-            setPrecioMax(max || "");
-          }}
-        >
-          <option value="-">Todos los precios</option>
-          {rangosPrecio.map((r) => (
-            <option key={r.label} value={`${r.min}-${r.max}`}>{r.label}</option>
-          ))}
+        <select defaultValue="">
+          <option value="">Todos los precios</option>
+          <option value="0-130">Menos de S/ 130</option>
+          <option value="130-160">S/ 130 - S/ 160</option>
+          <option value="160-180">S/ 160 - S/ 180</option>
+          <option value="180-9999">Más de S/ 180</option>
         </select>
 
-        <button
-          onClick={() => {
-            setMarca("");
-            setModelo("");
-            setPrecioMin("");
-            setPrecioMax("");
-          }}
-        >
-          Limpiar filtros
-        </button>
+        <button>Limpiar filtros</button>
       </section>
 
-      {/* 🔹 Cards */}
+      {/* 🔹 Cards (funcionales) */}
       <main id="vehiculosContainer">
-        {filteredVehiculos.length > 0 ? (
-          filteredVehiculos.map((auto) => <Card key={auto.id} {...auto} />)
-        ) : (
-          <p>No se encontraron vehículos con esos filtros.</p>
-        )}
+        {vehiculos.map((auto) => (
+          <Card key={auto.id} {...auto} />
+        ))}
       </main>
 
       {/* Botón WhatsApp */}
@@ -307,15 +222,13 @@ export default function Vehiculos() {
         className="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat en WhatsApp"
       >
         <img
           src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
           alt="WhatsApp"
         />
       </a>
-
-      <Footer />
     </div>
   );
 }
+
