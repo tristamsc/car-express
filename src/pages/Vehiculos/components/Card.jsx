@@ -14,8 +14,6 @@ export default function Card({ imagen, titulo, descripcion, anio, precio, etique
       <button
         className="toggle-info-btn"
         onClick={() => setShowDetails(!showDetails)}
-        aria-label="Alternar información del vehículo"
-        aria-pressed={showDetails}
       >
         {showDetails ? "Información del vehículo ✕" : "Información del vehículo"}
       </button>
@@ -34,8 +32,6 @@ export default function Card({ imagen, titulo, descripcion, anio, precio, etique
             <p>{descripcion}</p>
             {anio && <p className="anio">Año: {anio}</p>}
             <p className="precio">{precio}</p>
-
-            {/* Botón reservar abajo */}
             <button className="reservar-btn">RESERVAR AUTO</button>
           </motion.div>
         ) : (
@@ -60,3 +56,4 @@ export default function Card({ imagen, titulo, descripcion, anio, precio, etique
     </div>
   );
 }
+
