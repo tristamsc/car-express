@@ -6,6 +6,7 @@ import { Contacto } from './pages/Contacto/Contacto'
 import Login from './pages/Login/Login'
 import Vehiculos from './pages/Vehiculos/Vehiculos'
 import { Nav } from './components/Nav'
+import Reservas from './pages/reservas/Reservas'
 
 function App() {
 
@@ -15,7 +16,7 @@ function App() {
       <Route path='/contacto' element={<Contacto />} />
       <Route path="/login" element={<Login />} />
       <Route path="/vehiculos" element={<Vehiculos />} />
-      <Route path="/reservas" element={<><Nav /><h1>PAGINA DE RESERVAS</h1></>} />
+      <Route path="/reservas" element={<><Nav /><Reservas /></>} />
     </Routes>
   )
 }
