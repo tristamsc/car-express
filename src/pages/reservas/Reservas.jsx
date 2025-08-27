@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import "./styles/reservas.css";
 import ReservaForm from "./components/ReservaForm";
 import Resumen from "./components/Resumen";
-import Footer from "./components/Footer";
+import Footer from "../../components/Footer";
 import { VEHICLES } from "./data/vehicles";
 
 function todayStr() {
