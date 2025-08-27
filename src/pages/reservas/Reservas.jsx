@@ -1,7 +1,6 @@
 // src/App.jsx
 import { useMemo, useState } from "react";
 import "./styles/reservas.css";
-import Header from "./components/Header";
 import ReservaForm from "./components/ReservaForm";
 import Resumen from "./components/Resumen";
 import Footer from "./components/Footer";
