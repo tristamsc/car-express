@@ -5,15 +5,15 @@ import Card from "./components/Card";
 import { DoorOpen, Users, Luggage, Snowflake, Smartphone, Shield, Car } from "lucide-react";
 
 // Importación de imágenes
-import vehiculo2 from "../assets/img/vehiculo2.png";
-import corolla10 from "../assets/img/corolla10.png";
-import jetta2 from "../assets/img/jetta2.png";
-import corollacross1 from "../assets/img/corollacross1.jpg";
-import qashqai from "../assets/img/nissan-qashqai-2024.png";
-import creta from "../assets/img/hyundai_creta.png";
-import frontier from "../assets/img/Nissan-frontier-2024.png";
-import hilux from "../assets/img/toyota_hilux_2025.png";
-import mitsubishi from "../assets/img/mitsubishi_2025.png";
+import vehiculo2 from "../../assets/img/vehiculo2.png";
+import corolla10 from "../../assets/img/corolla10.png";
+import jetta2 from "../../assets/img/jetta2.png";
+import corollacross1 from "../../assets/img/corollacross1.jpg";
+import qashqai from "../../assets/img/nissan-qashqai-2024.png";
+import creta from "../../assets/img/hyundai_creta.png";
+import frontier from "../../assets/img/Nissan-frontier-2024.png";
+import hilux from "../../assets/img/toyota_hilux_2025.png";
+import mitsubishi from "../../assets/img/mitsubishi_2025.png";
 
 export default function Vehiculos() {
   const vehiculos = [
@@ -231,4 +231,5 @@ export default function Vehiculos() {
     </div>
   );
 }
+
 
